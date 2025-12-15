@@ -1064,7 +1064,7 @@ export class GLViewer {
             return;
         }
 
-        var scaleFactor = (this.CAMERA_Z - this.rotationGroup.position.z) * 0.85;
+        var scaleFactor = -1.0 * (this.CAMERA_Z - this.rotationGroup.position.z) * 0.85;
         var mult = 1.0;
         if (ev.ctrlKey) {
             mult = -1.0; //this is a pinch event turned into a wheel event (or they're just holding down the ctrl)
