@@ -3,7 +3,7 @@ const path = require("path");
 const webpack = require("webpack");
 const { merge } = require("webpack-merge");
 const pkg = require("./package.json");
-const ESLintPlugin = require("eslint-webpack-plugin");
+//const ESLintPlugin = require("eslint-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
 
 const banner = `${pkg.name} v${pkg.version}
@@ -34,7 +34,7 @@ base_config = {
       $: "jquery",
     }),
     new webpack.BannerPlugin({ banner }),
-    new ESLintPlugin({ exclude: ["node_modules"] }),
+    //new ESLintPlugin({ exclude: ["node_modules"] }),
   ],
   stats: {
     errorDetails: true,
