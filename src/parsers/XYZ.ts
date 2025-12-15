@@ -38,7 +38,10 @@ export function XYZ(str: string, options: ParserOptionsSpec) {
         lattice[5],
         lattice[8]
       );
-      atoms.modelData = [{ cryst: { matrix: matrix } }];
+      if (atoms.modelData === undefined) {
+        atoms.modelData = [];
+      }
+      atoms.modelData.push({ cryst: { matrix: matrix } });
     }
 
     var offset = 2;
