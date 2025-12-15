@@ -40,10 +40,10 @@ export class VolumeData {
     // x->y->z
 
     matrix: any = null; //if set must transform data
-    inversematrix: Matrix4|null = null;
+    inversematrix: Matrix4 | null = null;
     dimensionorder: any;
 
-    isbinary = new Set<string>(['ccp4','CCP4']);
+    isbinary = new Set<string>(['ccp4', 'CCP4']);
 
     constructor(str: any, format: string, options?: VolumeDataOptions) {
         format = format.toLowerCase();
@@ -93,8 +93,9 @@ export class VolumeData {
                 }
                 var variance = total / this.data.length;
                 //now normalize
+                const factor = 1.0 / Math.sqrt(variance)
                 for (let i = 0, n = this.data.length; i < n; i++) {
-                    this.data[i] = (this.data[i] - mean) / variance;
+                    this.data[i] = factor * (this.data[i] - mean);
                 }
             }
         }
@@ -364,7 +365,7 @@ export class VolumeData {
 
         // http://www.ccp4.ac.uk/html/maplib.html#description
         //code from ngl: https://github.com/arose/ngl/blob/master/js/ngl/parser.js
-        var header:any = {};
+        var header: any = {};
         bin = new Int8Array(bin);
         var intView = new Int32Array(bin.buffer, 0, 56);
         var floatView = new Float32Array(bin.buffer, 0, 56);
