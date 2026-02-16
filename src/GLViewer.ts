@@ -3560,7 +3560,7 @@ export class GLViewer {
         if (options.startFrame) {
             currFrame = options.startFrame % mostFrames;
         }
-        var inc = 1;
+        var inc = (currFrame == mostFrames - 1) ? -1 : 1;
         if (options.step) {
             inc = options.step;
             reps /= inc;
