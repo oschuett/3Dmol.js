@@ -310,9 +310,9 @@ export class Renderer {
     ) {
       //note that drawingBuffer may be smaller than the requested width
       //for large canvases
-      if(!this.isLost()) {
+      if (!this.isLost()) {
         var wid = this._gl.drawingBufferWidth / this.cols;
-        var hei = this._gl.drawingBufferHeight / this.rows;            
+        var hei = this._gl.drawingBufferHeight / this.rows;
         this._viewportWidth = wid;
         this._viewportHeight = hei;
         this._gl.enable(this._gl.SCISSOR_TEST);
@@ -341,8 +341,8 @@ export class Renderer {
       this.col != undefined
     ) {
       if (!this.isLost()) {
-        this._viewportWidth = this._gl.drawingBufferWidth /this.cols;
-        this._viewportHeight = this._gl.drawingBufferHeight/this.rows;
+        this._viewportWidth = this._gl.drawingBufferWidth / this.cols;
+        this._viewportHeight = this._gl.drawingBufferHeight / this.rows;
       }
 
       this.setViewport();
@@ -893,9 +893,14 @@ export class Renderer {
 
     //if using offscreen render, copy final image
     if (this._bitmap) {
-      const bitmap = this._offscreen.transferToImageBitmap();
-      this._bitmap.transferFromImageBitmap(bitmap);
-      bitmap.close();
+      try {
+        const bitmap = this._offscreen.transferToImageBitmap();
+        this._bitmap.transferFromImageBitmap(bitmap);
+        bitmap.close();
+      } catch (err) {
+        // Happens on Firefox when a previously hidden canvas re-appears, e.g. after a tab change.
+        console.log("Failed to transfer offscreen image.");
+      }
     }
   }
 
