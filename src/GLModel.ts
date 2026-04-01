@@ -2188,7 +2188,7 @@ export class GLModel {
         }
 
         // clear it all out
-        this.atoms = [];
+        this.atoms.length = 0; // clear array in-place because it's owned by this.frames
         // and add back in to get updated bonds
         this.addAtoms(newatoms);
     };
