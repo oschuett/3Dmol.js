@@ -7,6 +7,8 @@
     "target": "ES2015",
     "allowJs": true,
     "sourceMap": true,
+    "strict": false,
+    "ignoreDeprecations": "6.0",
     "declaration": true,
     "noUnusedLocals": true,
     "moduleResolution": "node",
@@ -14,12 +16,17 @@
       "dom",
       "esnext"
     ],
-    "baseUrl": "./src",
+    "rootDir": "./src",
+    "paths": {
+      "*": [
+        "./src/*"
+      ]
+    }
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.d.ts",
-    "src/**/*.js"   
+    "src/**/*.js"
   ],
   "exclude": [
     "node_modules",

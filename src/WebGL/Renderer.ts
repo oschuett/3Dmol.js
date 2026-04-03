@@ -155,9 +155,9 @@ export class Renderer {
   private _AOstrength: number = 1.0;
   private _AOradius: number = 5.0;
   private _extInstanced: any;
-  private _extFragDepth: ReturnType<WebGL2RenderingContext["getExtension"]>;
-  private _extFloatLinear: ReturnType<WebGL2RenderingContext["getExtension"]>;
-  private _extColorBufferFloat: ReturnType<WebGL2RenderingContext["getExtension"]>;
+  private _extFragDepth: EXT_frag_depth;
+  private _extFloatLinear: OES_texture_float_linear;
+  private _extColorBufferFloat: EXT_color_buffer_float;
 
   private SHADE_TEXTURE: number = 3;
 
