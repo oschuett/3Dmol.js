@@ -3,8 +3,8 @@ import { Vector3, Matrix4, XYZ } from "./WebGL/math";
 import { VolumetricMaterial, Mesh, Texture, Object3D, Material } from "./WebGL";
 import { CC } from "./colors";
 import { GLShape } from "./GLShape";
-import { AtomSelectionSpec } from "specs";
-import { GLViewer } from "GLViewer";
+import { AtomSelectionSpec } from "./specs";
+import { GLViewer } from "./GLViewer";
 
 
 

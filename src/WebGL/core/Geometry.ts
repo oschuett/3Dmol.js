@@ -3,7 +3,7 @@ import { LineBasicMaterial } from '../materials/LineBasicMaterial';
 import { EventDispatcher } from "./EventDispatcher";
 import { Vector3 } from "../math";
 import { CC, Color } from "../../colors";
-import { AtomSpec } from 'specs';
+import { AtomSpec } from '../../specs';
 const BUFFERSIZE = 65535; //limited to 16bit indices
 export class GeometryGroup {
   id: number;

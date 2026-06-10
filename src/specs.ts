@@ -1,7 +1,7 @@
 // Specifications for various object types used in 3Dmol.js
 // This is primarily for documentation
 
-import { Matrix4, Vector3 } from "WebGL";
+import { Matrix4, Vector3 } from "./WebGL";
 import { AtomStyleSpec, BondStyle, GLModel } from "./GLModel";
 import { GLViewer } from "./GLViewer";
 import { ColorSpec } from "./colors";

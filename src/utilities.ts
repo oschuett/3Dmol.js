@@ -1,10 +1,10 @@
 //a collection of miscellaneous utility functions
 
-import { GLViewer } from "GLViewer";
+import { GLViewer } from "./GLViewer";
 import { getGradient, Gradient, GradientType } from "./Gradient";
 import { VolumeData } from "./VolumeData";
 import { builtinColorSchemes, CC, elementColors, htmlColors, Color } from "./colors";
-import { IsoSurfaceSpec } from "GLShape";
+import { IsoSurfaceSpec } from "./GLShape";
 import { inflate, InflateFunctionOptions, Data } from "pako"
 
 //simplified version of jquery extend

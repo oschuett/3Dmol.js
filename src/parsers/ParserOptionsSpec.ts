@@ -16,7 +16,7 @@
 * @prop xyz XYZ cartesian coordinates format
 */
 
-import { AtomStyleSpec } from "GLModel";
+import { AtomStyleSpec } from "../GLModel";
 
 
 /**

@@ -11,8 +11,8 @@ import { CAP, GLDraw } from "./GLDraw"
 import { subdivide_spline } from "./glcartoon";
 import { adjustVolumeStyle, extend, Func, makeFunction } from "./utilities";
 import { GradientType } from "./Gradient";
-import { AtomSelectionSpec } from "specs";
-import { GLViewer } from "GLViewer";
+import { AtomSelectionSpec } from "./specs";
+import { GLViewer } from "./GLViewer";
 
 
 /**

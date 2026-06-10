@@ -3,7 +3,7 @@ import { Matrix4, Quaternion, Vector3 } from "../math";
 import type { Geometry } from './Geometry';
 import type { Fog } from '../Fog';
 import { Color, ColorConstructorArg } from "../../colors";
-import { Sprite } from 'WebGL/objects';
+import { Sprite } from '../../WebGL/objects';
 
 export let Object3DIDCount = 0;
 // Object3D base constructor function

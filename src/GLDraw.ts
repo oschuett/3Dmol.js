@@ -1,6 +1,6 @@
 import { Vector3 } from "./WebGL/math";
 import { Geometry } from "./WebGL";
-import { Color, Colored } from "colors";
+import { Color, Colored } from "./colors";
 
 
 //define enum values

@@ -15,10 +15,10 @@ import { Gradient } from "./Gradient";
 import { Parsers } from "./parsers";
 import { NetCDFReader } from "netcdfjs"
 import { AtomSelectionSpec, AtomSpec } from "./specs";
-import { GLViewer } from "GLViewer";
-import { ArrowSpec } from "GLShape";
+import { GLViewer } from "./GLViewer";
+import { ArrowSpec } from "./GLShape";
 import { ParserOptionsSpec } from "./parsers/ParserOptionsSpec";
-import { LabelSpec } from "Label";
+import { LabelSpec } from "./Label";
 import { assignBonds } from "./parsers/utils/assignBonds";
 
 /**
