@@ -54,6 +54,7 @@
   },
   "devDependencies": {
     "jquery": "^3.6.3",
-    "raw-loader": "^4.0.2"
+    "raw-loader": "^4.0.2",
+    "ts-loader": "^9.6.0"
   }
 }
